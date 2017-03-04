@@ -11,7 +11,9 @@ ZSH_THEME=pygmalion
 alias zshconfig="subl ~/.zshrc"
 alias envconfig="subl ~/Projects/config/env.sh"
 
-
+#Rebuild the cache of executable commands (this tell zsh not to trust its cache when completing)
+zstyle ":completion:*:commands" rehash 1
+ 
 plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
 
 # Remap for the Keypad
